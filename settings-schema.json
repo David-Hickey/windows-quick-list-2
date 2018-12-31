@@ -1,0 +1,11 @@
+{
+    "scroll_direction": {
+        "type": "combobox",
+        "description": "Scrolling down switches to",
+        "default": "right",
+        "options" : {
+            "Workspace left": "left",
+            "Workspace right": "right"
+        }
+    }
+}
