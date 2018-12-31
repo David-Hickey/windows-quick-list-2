@@ -3,6 +3,7 @@ const Cinnamon = imports.gi.Cinnamon;
 const Lang = imports.lang;
 const PopupMenu = imports.ui.popupMenu;
 const St = imports.gi.St;
+const Settings = imports.ui.settings;
 const Main = imports.ui.main;
 
 class CinnamonWindowsQuickListApplet extends Applet.IconApplet {
@@ -21,6 +22,8 @@ class CinnamonWindowsQuickListApplet extends Applet.IconApplet {
         this._menu.addMenuItem(this.subMenuItemWrapper);
 
         this.actor.connect('scroll-event', Lang.bind(this, this.on_applet_scrolled));
+        this.settings = new Settings.AppletSettings(this, metadata.uuid, instance_id);
+        this.settings.bind('scroll_direction', 'scroll_direction');
     }
 
     updateMenu() {
@@ -140,6 +143,10 @@ class CinnamonWindowsQuickListApplet extends Applet.IconApplet {
         let n_workspaces = global.screen.n_workspaces;
 
         direction = direction ? -1 : +1;
+
+        if (this.scroll_direction == "left") {
+            direction = -direction;
+        }
 
         let workspaceIndex = global.screen.get_active_workspace_index();
         let newWorkspaceIndex = ((workspaceIndex - direction) + n_workspaces) % n_workspaces;
