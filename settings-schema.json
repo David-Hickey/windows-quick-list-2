@@ -7,5 +7,10 @@
             "Workspace left": "left",
             "Workspace right": "right"
         }
+    },
+    "allow_cycling": {
+        "type": "checkbox",
+        "description": "Allow cycling workspaces",
+        "default": true
     }
 }

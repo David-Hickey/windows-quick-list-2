@@ -22,8 +22,10 @@ class CinnamonWindowsQuickListApplet extends Applet.IconApplet {
         this._menu.addMenuItem(this.subMenuItemWrapper);
 
         this.actor.connect('scroll-event', Lang.bind(this, this.on_applet_scrolled));
+
         this.settings = new Settings.AppletSettings(this, metadata.uuid, instance_id);
         this.settings.bind('scroll_direction', 'scroll_direction');
+        this.settings.bind('allow_cycling', 'allow_cycling');
     }
 
     updateMenu() {
@@ -149,6 +151,17 @@ class CinnamonWindowsQuickListApplet extends Applet.IconApplet {
         }
 
         let workspaceIndex = global.screen.get_active_workspace_index();
+
+        if (!this.allow_cycling) {
+            if (direction > 0 && workspaceIndex == 0) {
+                return;
+            }
+
+            if (direction < 0 && workspaceIndex == n_workspaces - 1) {
+                return;
+            }
+        }
+
         let newWorkspaceIndex = ((workspaceIndex - direction) + n_workspaces) % n_workspaces;
         let newWorkspace = global.screen.get_workspace_by_index(newWorkspaceIndex);
        
