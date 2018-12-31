@@ -26,6 +26,7 @@ class CinnamonWindowsQuickListApplet extends Applet.IconApplet {
         this.settings = new Settings.AppletSettings(this, metadata.uuid, instance_id);
         this.settings.bind('scroll_direction', 'scroll_direction');
         this.settings.bind('allow_cycling', 'allow_cycling');
+        this.settings.bind('middle_click_shows_desktop', 'middle_click_shows_desktop');
     }
 
     updateMenu() {
@@ -129,6 +130,12 @@ class CinnamonWindowsQuickListApplet extends Applet.IconApplet {
             this._menu.toggle_with_options(false);
         }
         this.menu.toggle();
+    }
+
+    on_applet_middle_clicked(event) {
+        if (this.middle_click_shows_desktop) {
+            global.screen.toggle_desktop(global.get_current_time());
+        }
     }
 
     on_applet_scrolled(target, event) {

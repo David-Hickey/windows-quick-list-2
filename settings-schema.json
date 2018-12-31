@@ -12,5 +12,10 @@
         "type": "checkbox",
         "description": "Allow cycling workspaces",
         "default": true
+    },
+    "middle_click_shows_desktop": {
+        "type": "checkbox",
+        "description": "Middle click toggles desktop",
+        "default": true
     }
 }
