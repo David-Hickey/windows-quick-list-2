@@ -16,4 +16,4 @@ By default scrolling down switches right, workspaces cycle, and middle clicking 
 
 ### Installation
 
-I might at some point look into adding this to Cinnamon spices. For now though, just drop all the files in `~/.local/share/cinnamon/applets/windows-quick-list-2@davidhickey` - you'll have to create this folder yourself if it doesn't exist.
+I might at some point look into adding this to Cinnamon spices. For now though, just drop `files/windows-quick-list-2@davidhickey` from this repository in your `~/.local/share/cinnamon/applets/`. If this folder doesn't exist on your computer, just create it yourself.
