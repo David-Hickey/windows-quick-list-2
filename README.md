@@ -1,5 +1,5 @@
 # Windows Quick List 2
-The default `windows-quick-list` in Linux Mint's Cinnamon desktop environment felt like it was lacking a certain something. I decided to remedy this by adding some functionality I'd been missing.
+The default [`windows-quick-list`](https://github.com/linuxmint/Cinnamon/tree/master/files/usr/share/cinnamon/applets/windows-quick-list%40cinnamon.org) in Linux Mint's Cinnamon desktop environment felt like it was lacking a certain something. I decided to remedy this by adding some functionality I'd been missing.
 
 Now, scrolling while the cursor is over the applet causes the workspace to switch. Middle clicking will toggle the desktop. To me, this feels much better.
 
