@@ -16,4 +16,7 @@ By default scrolling down switches right, workspaces cycle, and middle clicking 
 
 ### Installation
 
-I might at some point look into adding this to Cinnamon spices. For now though, just download the latest release from the releases tab. You want the first `.zip` archives, NOT one of the source code archives. Then, extract the `.zip` into `~/.local/share/cinnamon/applets/`; you should end up with a path like `~/.local/share/cinnamon/applets/windows-quick-list-2@davidhickey/`. If `~/.local/share/cinnamon/applets` doesn't exist on your computer, and you're sure you're using the Cinnamon desktop environment, just create it yourself. Then go to the Applets program in your Cinnamon settings and add Windows Quick List 2 to your panel, wherever you like. That's it! You're done.
+I might at some point look into adding this to Cinnamon spices. For now though:
+1. Download the latest release from the releases tab. You want the first `.zip` archive, NOT one of the source code archives. 
+2. Then, extract the `.zip` into `~/.local/share/cinnamon/applets/`; you should end up with being able to find `manifest.json` at `~/.local/share/cinnamon/applets/windows-quick-list-2@davidhickey/manifest.json`.
+3. Then go to the Applets program in your Cinnamon settings and add Windows Quick List 2 to your panel, wherever you like. That's it! You're done.
