@@ -4,5 +4,5 @@
     "description": "Quickly access windows from all workspaces",
     "icon": "view-list",
     "max-instances": -1,
-    "version": "1.5.2"
+    "version": "1.5.3"
 }
